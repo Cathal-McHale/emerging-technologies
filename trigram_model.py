@@ -1,5 +1,5 @@
 import re #import regular expression module
-from collections import defaultdict#import defaultdict for default value
+from collections import defaultdict #import defaultdict for default value
 
 
 def cleanup_text(text):
@@ -10,10 +10,11 @@ def cleanup_text(text):
 
     return cleaned_txt
 
-test_text = "Hello, world! 123444 testing to see if it removes"
-cleaned_txt = cleanup_text(test_text)
+#test_text = "Hello, world! 123444 testing to see if it removes"
+#cleaned_txt = cleanup_text(test_text)
 
-print("original text = : ", test_text)
-print("Cleaned text = : ", cleaned_txt)
+#print("original text = : ", test_text)
+#print("Cleaned text = : ", cleaned_txt)
 
-   # 
+    
+
