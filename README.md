@@ -15,8 +15,10 @@ https://docs.python.org/3/library/re.html#re.sub
 the re.sub() allows pattern matching in strings and replacing them with different values specified by the user.
 - this function was used to remove non-alphabetical characters and make the string format to uppdercase
 
+
+
 Method 2 def create_trigram(text):
-- Thus function processes a string of text to generate a trigram model, which counts every three-character sequence that reoccurs within the text.
+- This function processes a string of text to generate a trigram model, which counts every three-character sequence that reoccurs within the text.
 - this model is useful for analyzing language patterns because it provides a statistical understanding of how characters group together.
 -This function takes in a cleaned string of texts, splits it into groups of overlappings of three characters, and counts how often each trigram appears.
 - The trigram includes spaces and periods, meaning it is a case-sensitive model that tracks every detail of the structure.
