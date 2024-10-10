@@ -30,3 +30,20 @@ HOW it works:
 - After scanning the text, the function returns the dictionary of 2 things:
 - Keys: are the trigrams (outputs each trigram)
 - Value: is the amount of time that trigram appears
+
+method 3 def read_files(file_path):
+Objective: 
+- This function reads the content of a specified text file
+Function: - read_files(file_path)
+purpose: the read_files() function attempts to read content of a file located at the specified path
+-uses a try-except block to handle if the file is not found
+- returns text content of file
+- if text_content:
+   if the content is not None, meaning the file was read 
+    -   cleaned_text = cleanup_text(text_content)  # Clean the text
+    - Called to clean raw text
+    - trigram_model = create_trigram(cleaned_text)  # Generate trigrams
+    - generate model of trigrams from cleaned text
+    print(trigram_model)  # Output the trigram model checks
+    Python File input: https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files This is the source that helped me understand how file input works in Python. specifically for the method i used stackoverflow https://stackoverflow.com/questions/64157569/read-and-write-from-and-to-file-using-functions and replaced it with my own code.
+
