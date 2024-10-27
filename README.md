@@ -1,6 +1,6 @@
 # emerging-technologies
 
-Research: Task 1
+# Research: Task 1
 Objective method 1 re.sub()
 - Focusing on understanding how the re.sub() method from Pythons regular expression module can be applied for string manipulation such as cleaning text by removing unwanted characters.
 - The function cleanup_text() uses re lib to clean a string by:
@@ -47,3 +47,23 @@ purpose: the read_files() function attempts to read content of a file located at
     print(trigram_model)  # Output the trigram model checks
     Python File input: https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files This is the source that helped me understand how file input works in Python. specifically for the method i used stackoverflow https://stackoverflow.com/questions/64157569/read-and-write-from-and-to-file-using-functions and replaced it with my own code.
 
+
+    # Research Task 2
+Objective:  Using probability to determine the next letter after "TH"
+- Focusing on how generate_string function predicts the next char
+- While len(result) <>length
+PURPOSE
+ enters a loop that continues the generated string reaches 10000 
+- Filtering the trigrams in the model to check which trigram starts with "TH" and gets the third letter in each trigram
+## Showing probabilities of the next characters
+- The sequence of characters that forms context for prediciting the next char.
+- Next_char is the list of all the different possible characters that could follow the prefix
+-   next_chars = [k[2] for k in filtered_trigrams.keys()]
+        counts = list(filtered_trigrams.values())
+PURPOSE:
+- Extracts the third char. from each matching trigram and stores them in next_chars and the frequency each appears is stored in counts
+        next_char = random.choices(next_chars, weights=counts)[0]
+PURPOSE:
+        next_char = random.choices(next_chars, weights=counts)[0]
+
+- Chooses the next char from next_chars based on the frequencies and using weighted probabilities.
