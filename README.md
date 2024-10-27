@@ -67,3 +67,6 @@ PURPOSE:
         next_char = random.choices(next_chars, weights=counts)[0]
 
 - Chooses the next char from next_chars based on the frequencies and using weighted probabilities.
+Sources for predicting the next char: https://github.com/PradipKumarChaudhary1/N-gram-model
+https://stackoverflow.com/questions/64741555/what-should-be-the-behavior-of-trigrams-to-predict-next-word-given-a-input-size
+https://web.stanford.edu/~jurafsky/slp3/3.pdf 3.1: N-Grams
