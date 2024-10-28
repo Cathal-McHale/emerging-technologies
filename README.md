@@ -137,3 +137,19 @@ Source:
 -  https://www.geeksforgeeks.org/how-to-split-a-file-into-a-list-in-python/
 - https://stackoverflow.com/questions/25012108/how-to-calculate-percentage-of-english-words-in-a-paragraph-using-python
 -https://inventwithpython.com/hacking/chapter12.html
+
+# Task 4 Exporting to Json
+- Final task:
+Objective:
+- Export the model to json
+jsonFile = open("trigrams.json", "w")
+PURPOSE:
+- Open a json file and write to it
+- jsonFile = open("trigrams.json", "w")
+jsonFile.write(json.dumps(trigram_model, sort_keys=True, indent=3)) 
+- Output to json in a readable format, that takes in the trigram model, it also gets sorted and indented to help it look tidier
+jsonFile.close
+PURPOSE:
+- Close file after writing to it.
+Json dumps: https://docs.python.org/3/library/json.html
+writing to a json file
