@@ -78,6 +78,7 @@ PURPOSE:
 -  next_char = random.choices(next_chars, weights=counts)[0]
 -   probabilities = [count / total_counts for count in counts]
 -  print(f"Prefix: '{prefix}', Next Characters: {next_chars}, Counts: {counts}, Probabilities: {probabilities}")
+- https://github.com/PradipKumarChaudhary1/N-gram-model
  PURPOSE:
 - Calculates probabilities of the possible next chars following the given prefix based on the counts.
 - Divides each char count by the total counts showing how likely each char follows the prefix char
@@ -92,5 +93,47 @@ PURPOSE:
 
 - Chooses the next char from next_chars based on the frequencies and using weighted probabilities.
 Sources for predicting the next char: https://github.com/PradipKumarChaudhary1/N-gram-model
-https://stackoverflow.com/questions/64741555/what-should-be-the-behavior-of-trigrams-to-predict-next-word-given-a-input-size
-https://web.stanford.edu/~jurafsky/slp3/3.pdf 3.1: N-Grams
+- https://stackoverflow.com/questions/64741555/what-should-be-the-behavior-of-trigrams-to-predict-next-word-given-a-input-size
+- https://web.stanford.edu/~jurafsky/slp3/3.pdf 3.1: N-Grams
+
+
+# Task 3 Analyzing my Model
+## Objective:
+- To determine the percentage of words in my 10,000 characters that are actual words in the English Language.
+- def calc_valid_word_percentage(text): 
+PURPOSE:
+ - This function takes a string input 'text', splits it into individual words and calculates the percentage of the words that are considered valid based on their presence in the defined trigram model.
+ - 'Text' string contains the words to be anaylised
+- return valid_word_percentage  # Return the percentage of valid words
+PURPOSE:
+- returns the valid word input text, if there are no valid words, it returns 0.
+### how it calculates:
+-  words = text.split() split the texts into indivual words
+    - valid_words = 0  keeps track of the valid words 
+    - total_words = 0  keeps track of the total amount of words
+(Both will be used to determine the total number of valid words down below)
+
+    - for word in words: goes through the words to do a check
+       - total_words += 1  add to the total words counter
+        
+        - if word in trigram_model: Check if the word is in the trigram model
+          -  valid_words += 1  add to valid words counter
+    
+     Calculate the percentage of valid words by deviding them against eachother and multiplying by 100 to get the percentage
+    valid_word_percentage = (valid_words / total_words) * 100 if total_words > 0 else 0
+
+  ###  Function read_valid_words
+- reads a file path of selected file containing valid words
+- try:
+
+
+- PURPOSE:
+- try to open the file selected
+
+- valid_words = file.read().split()
+- PURPOSE:
+- reads and splits the lines of the entire content using the read() & split method  and store it in the variable: valid_words 
+Source:
+-  https://www.geeksforgeeks.org/how-to-split-a-file-into-a-list-in-python/
+- https://stackoverflow.com/questions/25012108/how-to-calculate-percentage-of-english-words-in-a-paragraph-using-python
+-https://inventwithpython.com/hacking/chapter12.html
