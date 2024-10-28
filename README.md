@@ -70,15 +70,15 @@ PURPOSE:
 - The sequence of characters that forms context for prediciting the next char.
 - Next_char is the list of all the different possible characters that could follow the prefix
 -   next_chars = [k[2] for k in filtered_trigrams.keys()]
-        counts = list(filtered_trigrams.values())
+       -  counts = list(filtered_trigrams.values())
 PURPOSE:
 - Extracts the third char. from each matching trigram and stores them in next_chars and the frequency each appears is stored in counts
-        next_char = random.choices(next_chars, weights=counts)[0]
+       -  next_char = random.choices(next_chars, weights=counts)[0]
 PURPOSE:
-        next_char = random.choices(next_chars, weights=counts)[0]
+-  next_char = random.choices(next_chars, weights=counts)[0]
 -   probabilities = [count / total_counts for count in counts]
-        print(f"Prefix: '{prefix}', Next Characters: {next_chars}, Counts: {counts}, Probabilities: {probabilities}")
-        PURPOSE:
+-  print(f"Prefix: '{prefix}', Next Characters: {next_chars}, Counts: {counts}, Probabilities: {probabilities}")
+ PURPOSE:
 - Calculates probabilities of the possible next chars following the given prefix based on the counts.
 - Divides each char count by the total counts showing how likely each char follows the prefix char
 - Prefix refers to the sequence of char that forms the contect for predicting the next char.
