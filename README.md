@@ -49,11 +49,22 @@ purpose: the read_files() function attempts to read content of a file located at
 
 
     # Research Task 2
-Objective:  Using probability to determine the next letter after "TH"
+Objective: 
+- This Task Generates a string-based trigram model, the model is a dictionary containing trigrams and their frequencys. Starts with the predefined "TH" and generates characters by selecting the most likely next char. based on the trigram counts
 - Focusing on how generate_string function predicts the next char
 - While len(result) <>length
 PURPOSE
- enters a loop that continues the generated string reaches 10000 
+ enters a loop that continues the generated string reaches 10000
+-     prefix = result[-2:] 
+PURPOSE:
+- extraxts the last two characters of the string to use as a prefix for checking for matching trigrams 
+- filtered_trigrams = {k: v for k, v in trigram_model.items() if k.startswith(prefix)}
+PURPOSE: 
+- filters the trigrams in the model to find others that start with the current prefix
+
+if not filtered_trigrams:
+PURPOSE: 
+- If none left loop breaks and string generation stops
 - Filtering the trigrams in the model to check which trigram starts with "TH" and gets the third letter in each trigram
 ## Showing probabilities of the next characters
 - The sequence of characters that forms context for prediciting the next char.
@@ -65,6 +76,19 @@ PURPOSE:
         next_char = random.choices(next_chars, weights=counts)[0]
 PURPOSE:
         next_char = random.choices(next_chars, weights=counts)[0]
+-   probabilities = [count / total_counts for count in counts]
+        print(f"Prefix: '{prefix}', Next Characters: {next_chars}, Counts: {counts}, Probabilities: {probabilities}")
+        PURPOSE:
+- Calculates probabilities of the possible next chars following the given prefix based on the counts.
+- Divides each char count by the total counts showing how likely each char follows the prefix char
+- Prefix refers to the sequence of char that forms the contect for predicting the next char.
+- next_char is the list of all the possible characters that could follow the prefeix
+- counts counts how often each of the possible next chars follow the prefix from the fil
+-generated_string = generate_string(trigram_model) 
+
+PURPOSE:
+- Calls the function passing the trigram_model dictionary to generate a string using the trigram model. 
+- The result is then stored in the generated_string variable
 
 - Chooses the next char from next_chars based on the frequencies and using weighted probabilities.
 Sources for predicting the next char: https://github.com/PradipKumarChaudhary1/N-gram-model
