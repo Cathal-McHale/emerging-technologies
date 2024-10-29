@@ -153,3 +153,4 @@ PURPOSE:
 - Close file after writing to it.
 Json dumps: https://docs.python.org/3/library/json.html
 writing to a json file
+https://www.geeksforgeeks.org/reading-and-writing-json-to-a-file-in-python/
