@@ -70,24 +70,61 @@ const responses = {
   
   // Function to select a response based on user input
   function respond(userInput) {
-    // Loop through all response patterns
     for (let pattern in responses) {
       const regex = new RegExp(pattern, 'i');
       const match = userInput.match(regex);
   
       if (match) {
-        // If a match is found, select a random response from the matched responses
         const responseTemplate = responses[pattern][Math.floor(Math.random() * responses[pattern].length)];
-  
-        // If there are capture groups (e.g., 'I need something'), reflect them
         const reflectedGroups = match.slice(1).map(group => reflect(group));
-        
-        // Return the formatted response
         return responseTemplate.replace(/{(\d+)}/g, (match, number) => reflectedGroups[number]);
       }
     }
-  
-    // If no suitable response is found, return a default response
     return "I'm not sure I understand. Can you elaborate?";
   }
+  
+  // Function to display messages
+  function displayMessage(message, sender) {
+    const chatBox = document.getElementById('chat');
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message');
+    
+    if (sender === 'user') {
+      messageElement.classList.add('user-message');
+      messageElement.textContent = "You: " + message;
+    } else if (sender === 'bot') {
+      messageElement.classList.add('bot-message');
+      messageElement.textContent = "Bot: " + message;
+    }
+    
+    chatBox.appendChild(messageElement);
+    chatBox.scrollTop = chatBox.scrollHeight;  // Scroll to bottom
+  }
+  
+  // Handle Send button click
+  document.getElementById('send-btn').addEventListener('click', () => {
+    const userInput = document.getElementById('user-input').value.trim();
+    
+    if (userInput) {
+      // Display user message
+      displayMessage(userInput, 'user');
+      
+      // Get bot response
+      const botResponse = respond(userInput);
+      
+      // Display bot response
+      displayMessage(botResponse, 'bot');
+      
+      // Clear the input field
+      document.getElementById('user-input').value = '';
+    }
+  });
+  
+  // Optional: Handle "Enter" key to send message
+  document.getElementById('user-input').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      document.getElementById('send-btn').click();
+    }
+  });
   
