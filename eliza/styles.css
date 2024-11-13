@@ -27,6 +27,7 @@
     flex: 1;
     padding: 10px;
     overflow-y: auto;
+    background-color: #ffffff;
 }
 
 /* Chatbox input area */
@@ -39,9 +40,9 @@
     flex: 1;
     padding: 10px;
     border: none;
-    border-radius: 0;
     resize: none;
     outline: none;
+    font-size: 14px;
 }
 
 .chatbox-input button {
@@ -50,6 +51,7 @@
     color: white;
     border: none;
     cursor: pointer;
+    font-size: 14px;
 }
 
 .chatbox-input button:hover {

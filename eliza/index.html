@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELIZA Chatbot</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="chatbot-container">
-        <h1>ELIZA Chatbot</h1>
-        <div id="chat-display"></div>
-        <input type="text" id="user-input" placeholder="Type your message..." autofocus>
-        <button onclick="sendMessage()">Send</button>
+    <div class="chatbox">
+        <!-- Chatbox Header -->
+        <div class="chatbox-header">
+            ELIZA Chatbot
+        </div>
+
+        <!-- Chatbox Messages Area -->
+        <div class="chatbox-messages" id="chat-display"></div>
+
+        <!-- Chatbox Input Area -->
+        <div class="chatbox-input">
+            <textarea id="user-input" placeholder="Type your message..." autofocus></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
     </div>
+
+    <!-- Link to the external JavaScript file -->
     <script src="eliza.js"></script>
 </body>
 </html>
