@@ -154,3 +154,20 @@ PURPOSE:
 Json dumps: https://docs.python.org/3/library/json.html
 writing to a json file
 https://www.geeksforgeeks.org/reading-and-writing-json-to-a-file-in-python/
+
+
+# Eliza Chatbot
+**Link**
+- https://cathal-mchale.github.io/emerging-technologies/
+
+Objective:
+- To create a chatbot that is entirely ran on the client side, not using any external Libraries or APIs.
+
+How to do create the Chatbot
+- To create the chatbot, i will be using html, css, and javaScript to handle the functionality.
+
+## Research
+What is ELIZA?
+- Eliza is an early NLP computer program developed in the 60s by Joeseph Weizenbaum
+- Its purpose was to create and explore communication between humans and machines.
+- Eliza uses a pattern matching and substitution method to simulate a conversation that gave people the illusion the machine could understand the interaction. 
