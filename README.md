@@ -1,6 +1,16 @@
 # emerging-technologies
 
-# Research: Task 1
+# Installation
+## Clone the repository
+- git clone https://github.com/Cathal-McHale/emerging-technologies.git
+- cd emerging-technologies
+
+## Set up the Python Environment
+- Make sure python is installed
+- Install the required dependencies
+
+# Usage:
+##  Research: Task 1 Clean up and Trigram model
 Objective method 1 re.sub()
 - Focusing on understanding how the re.sub() method from Pythons regular expression module can be applied for string manipulation such as cleaning text by removing unwanted characters.
 - The function cleanup_text() uses re lib to clean a string by:
@@ -14,8 +24,6 @@ My understanding of reading the following link on pythons documentation:
 https://docs.python.org/3/library/re.html#re.sub
 the re.sub() allows pattern matching in strings and replacing them with different values specified by the user.
 - this function was used to remove non-alphabetical characters and make the string format to uppdercase
-
-
 
 Method 2 def create_trigram(text):
 - This function processes a string of text to generate a trigram model, which counts every three-character sequence that reoccurs within the text.
@@ -46,7 +54,6 @@ purpose: the read_files() function attempts to read content of a file located at
     - generate model of trigrams from cleaned text
     print(trigram_model)  # Output the trigram model checks
     Python File input: https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files This is the source that helped me understand how file input works in Python. specifically for the method i used stackoverflow https://stackoverflow.com/questions/64157569/read-and-write-from-and-to-file-using-functions and replaced it with my own code.
-
 
     # Research Task 2
 Objective: 
@@ -96,7 +103,6 @@ Sources for predicting the next char: https://github.com/PradipKumarChaudhary1/N
 - https://stackoverflow.com/questions/64741555/what-should-be-the-behavior-of-trigrams-to-predict-next-word-given-a-input-size
 - https://web.stanford.edu/~jurafsky/slp3/3.pdf 3.1: N-Grams
 
-
 # Task 3 Analyzing my Model
 ## Objective:
 - To determine the percentage of words in my 10,000 characters that are actual words in the English Language.
@@ -126,7 +132,6 @@ PURPOSE:
 - reads a file path of selected file containing valid words
 - try:
 
-
 - PURPOSE:
 - try to open the file selected
 
@@ -155,7 +160,6 @@ Json dumps: https://docs.python.org/3/library/json.html
 writing to a json file
 https://www.geeksforgeeks.org/reading-and-writing-json-to-a-file-in-python/
 
-
 # Eliza Chatbot
 **Link**
 - https://cathal-mchale.github.io/emerging-technologies/
@@ -171,3 +175,16 @@ What is ELIZA?
 - Eliza is an early NLP computer program developed in the 60s by Joeseph Weizenbaum
 - Its purpose was to create and explore communication between humans and machines.
 - Eliza uses a pattern matching and substitution method to simulate a conversation that gave people the illusion the machine could understand the interaction. 
+
+
+ # Dependencies 
+ ## Python packages
+ - Listed in the requirements.txt
+ - regex==2024.10.10
+ - jsonschema==4.19.0
+
+Libraries Used:
+
+re: For regular expressions (re.sub()).
+random: For probabilistic text generation.
+json: For exporting trigram data.
