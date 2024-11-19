@@ -174,7 +174,8 @@ How to do create the Chatbot
 What is ELIZA?
 - Eliza is an early NLP computer program developed in the 60s by Joeseph Weizenbaum
 - Its purpose was to create and explore communication between humans and machines.
-- Eliza uses a pattern matching and substitution method to simulate a conversation that gave people the illusion the machine could understand the interaction. 
+- Eliza uses a pattern matching and substitution method to simulate a conversation that gave people 
+  the illusion the machine could understand the interaction. 
 
 
  # Dependencies 

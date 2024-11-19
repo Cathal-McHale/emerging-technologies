@@ -88,15 +88,16 @@ const responses = {
     const chatBox = document.getElementById('chat');
     const messageElement = document.createElement('div');
     messageElement.classList.add('message');
-    
+    //if the user types a message return the message with "You:" in front of it
     if (sender === 'user') {
       messageElement.classList.add('user-message');
       messageElement.textContent = "You: " + message;
+      //if the bot types a message return the message with "Bot:" in front of it
     } else if (sender === 'bot') {
       messageElement.classList.add('bot-message');
       messageElement.textContent = "Bot: " + message;
     }
-    
+    // this will add the message to the chat box
     chatBox.appendChild(messageElement);
     chatBox.scrollTop = chatBox.scrollHeight;  // Scroll to bottom
   }
