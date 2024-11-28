@@ -97,7 +97,7 @@ const responses = {
       messageElement.classList.add('bot-message');
       messageElement.textContent = "Bot: " + message;
     }
-    // this will add the message to the chat box
+    //  add the message to the chat box
     chatBox.appendChild(messageElement);
     chatBox.scrollTop = chatBox.scrollHeight;  // Scroll to bottom
   }
@@ -121,11 +121,10 @@ const responses = {
     }
   });
   
-  // Optional: Handle "Enter" key to send message
+  // Handle "Enter" key to send message
   document.getElementById('user-input').addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
       document.getElementById('send-btn').click();
     }
   });
-  
