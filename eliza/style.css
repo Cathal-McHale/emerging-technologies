@@ -13,8 +13,16 @@ h1 {
     color: #ffffff;
 }
 
+/* Chat container styling */
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 /* Chat box styling */
 #chat {
+    flex: 1;
     margin-bottom: 20px;
     max-height: 70vh;
     overflow-y: auto;
@@ -45,8 +53,17 @@ h1 {
 .bot-message {
     font-style: italic;
     color: #333;
-    background-color: #3a3b45;
+    background-color: #4a4b55; /* Brighter color */
     align-self: flex-start;
+}
+
+/* Input container styling */
+#input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #343541;
+    border-top: 1px solid #565869;
 }
 
 /* Textarea styling */
