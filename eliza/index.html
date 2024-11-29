@@ -13,13 +13,15 @@
   <h1>ELIZA Chatbot</h1>
 
   <!-- Chat box container -->
-  <div id="chat">
-    <!-- Chat messages will appear here -->
-  </div>
-
-  <!-- User input area -->
-  <textarea id="user-input" rows="4" placeholder="Ask me something..."></textarea>
-  <button id="send-btn">Send</button>
+  <div id="chat-container">
+    <div id="chat">
+        <!-- Chat messages will be show here  -->
+    </div>
+    <div id="input-container">
+        <textarea id="user-input" placeholder="Type your message here..."></textarea>
+        <button id="send-btn">Send</button>
+    </div>
+</div>
 
   <!-- Link to external JavaScript file -->
   <script src="eliza.js"></script>
