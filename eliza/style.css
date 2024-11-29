@@ -1,7 +1,7 @@
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f9;
@@ -17,37 +17,47 @@ h1 {
 /* Chat box styling */
 #chat {
     margin-bottom: 20px;
-    max-height: 400px;
+    max-height: 600px;
     overflow-y: auto;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 20px;
     background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Message styling */
 .message {
     margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 75%;
 }
 
 /* User message styling */
 .user-message {
     font-weight: bold;
-    color: #333;
+    color: #fff;
+    background-color: #007BFF;
+    align-self: flex-end;
 }
 
 /* Bot message styling */
 .bot-message {
     font-style: italic;
-    color: #555;
+    color: #333;
+    background-color: #f1f1f1;
+    align-self: flex-start;
 }
 
 /* Textarea styling */
 textarea {
-    width: 80%;
+    width: calc(100% - 120px);
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    resize: none;
 }
 
 /* Button styling */

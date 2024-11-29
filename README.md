@@ -8,7 +8,7 @@ This repository contains research tasks and implementations related to text proc
 4. Running the Jupyter Notebook
 5. Research Task 1: Text Cleanup and Trigram Model
 6. Research Task 2: String Generation with Trigrams
-7. Research Task 3: Analyzing the Model
+7. Research Task 3: Analysing the Model
 8. Task 4: Exporting Trigram Model to JSON
 9. Eliza Chatbot
 10. Dependencies
@@ -77,7 +77,7 @@ Clone the repository:
 -  How to Run:
 - Ensure the trigram model is available (generated in Task 1 or loaded from JSON).
 - Run the notebook cells to generate text and view probabilities.
-- Research Task 3: Analyzing the Model
+- Research Task 3: Analysing the Model
 - Notebook: task3_model_analysis.ipynb
 - Objective: Calculate the percentage of valid English words in a generated string.
 
@@ -86,7 +86,7 @@ Clone the repository:
 - Outputs the percentage of valid words in the string.
 - How to Run:
 - Load a valid word list (e.g., data/valid_words.txt).
-- Run the notebook cells to analyze the trigram-generated text.
+- Run the notebook cells to analyse the trigram-generated text.
 
 - Task 4: Exporting Trigram Model to JSON
 - Notebook: task4_export_to_json.ipynb

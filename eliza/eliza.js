@@ -1,5 +1,15 @@
 // Responses dictionary using regular expressions
 const responses = {
+  'what is your name': ["I am ELIZA, your virtual assistant."]
+  ,
+  'how are you':[ "I'm just a program, so I don't have feelings, but thank you for asking!"],
+  'what is the capital of france': ["The capital of France is Paris."],
+  'who is the president of the united states': ["As of 2023, the President of the United States is Joe Biden."],
+  
+  'what is the weather like': ["I can't check the weather right now, but you can look it up online!"],
+  'bye|goodbye|exit': ["Goodbye! Take care.",],
+ // '(.*)': "I'm not sure I understand. Can you elaborate?"
+ 
     'hello|hi|hey': [
       "Hello! How are you feeling today?",
       "Hi there! What’s on your mind?",
@@ -97,7 +107,7 @@ const responses = {
       messageElement.classList.add('bot-message');
       messageElement.textContent = "Bot: " + message;
     }
-    //  add the message to the chat box
+    // this will add the message to the chat box
     chatBox.appendChild(messageElement);
     chatBox.scrollTop = chatBox.scrollHeight;  // Scroll to bottom
   }
@@ -121,10 +131,11 @@ const responses = {
     }
   });
   
-  // Handle "Enter" key to send message
+  // Optional: Handle "Enter" key to send message
   document.getElementById('user-input').addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
       document.getElementById('send-btn').click();
     }
   });
+  
