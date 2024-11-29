@@ -49,83 +49,75 @@ const responses = {
     "Interesting... go on."
   ]
 };
-  
-  // Reflections dictionary to replace pronouns
-  const reflections = {
-    "I": "you",
-    "me": "you",
-    "my": "your",
-    "am": "are",
-    "you": "I",
-    "your": "my",
-    "yours": "mine",
-    "are": "am"
-  };
-  
-  // Function to reflect the text
-  function reflect(text) {
-    const words = text.toLowerCase().split(" ");
-    const reflectedWords = words.map(word => reflections[word] || word);
-    return reflectedWords.join(" ");
+
+// Reflections dictionary to replace pronouns
+const reflections = {
+  "I": "you",
+  "me": "you",
+  "my": "your",
+  "am": "are",
+  "you": "I",
+  "your": "my",
+  "yours": "mine",
+  "are": "am"
+};
+
+// Function to reflect the text
+function reflect(text) {
+  const words = text.toLowerCase().split(" ");
+  const reflectedWords = words.map(word => reflections[word] || word);
+  return reflectedWords.join(" ");
+}
+
+// Function to select a response based on user input
+function respond(userInput) {
+  for (let pattern in responses) {
+    const regex = new RegExp(pattern, 'i'); // Case-insensitive matching
+    const match = userInput.match(regex);
+
+    if (match) {
+      const responseTemplate = responses[pattern][Math.floor(Math.random() * responses[pattern].length)];
+      const reflectedGroups = match.slice(1).map(group => reflect(group));
+      return responseTemplate.replace(/{(\d+)}/g, (_, number) => reflectedGroups[number] || '');
+    }
   }
-  
-  // Function to select a response based on user input
-  function respond(userInput) {
-    for (let pattern in responses) {
-      const regex = new RegExp(pattern, 'i');
-      const match = userInput.match(regex);
-  
-      if (match) {
-        const responseTemplate = responses[pattern][Math.floor(Math.random() * responses[pattern].length)];
-        const reflectedGroups = match.slice(1).map(group => reflect(group));
-        return responseTemplate.replace(/{(\d+)}/g, (match, number) => reflectedGroups[number]);
-      }
-    }
-    return "I'm not sure I understand. Can you elaborate?";
+  return "I'm not sure I understand. Can you elaborate?";
+}
+
+// Function to display messages
+function displayMessage(message, sender) {
+  const chatBox = document.getElementById('chat');
+  const messageElement = document.createElement('div');
+  messageElement.classList.add('message');
+
+  if (sender === 'user') {
+    messageElement.classList.add('user-message');
+    messageElement.textContent = "You: " + message;
+  } else if (sender === 'bot') {
+    messageElement.classList.add('bot-message');
+    messageElement.textContent = "Bot: " + message;
   }
-  
-  // Function to display messages
-  function displayMessage(message, sender) {
-    const chatBox = document.getElementById('chat');
-    const messageElement = document.createElement('div');
-    messageElement.classList.add('message');
-    //if the user types a message return the message with "You:" in front of it
-    if (sender === 'user') {
-      messageElement.classList.add('user-message');
-      messageElement.textContent = "You: " + message;
-      //if the bot types a message return the message with "Bot:" in front of it
-    } else if (sender === 'bot') {
-      messageElement.classList.add('bot-message');
-      messageElement.textContent = "Bot: " + message;
-    }
-    // this will add the message to the chat box
-    chatBox.appendChild(messageElement);
-    chatBox.scrollTop = chatBox.scrollHeight;  // Scroll to bottom
+
+  chatBox.appendChild(messageElement);
+  chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to the bottom
+}
+
+// Handle Send button click
+document.getElementById('send-btn').addEventListener('click', () => {
+  const userInput = document.getElementById('user-input').value.trim();
+
+  if (userInput) {
+    displayMessage(userInput, 'user'); // Display user message
+    const botResponse = respond(userInput); // Generate bot response
+    displayMessage(botResponse, 'bot'); // Display bot response
+    document.getElementById('user-input').value = ''; // Clear input field
   }
-  
-  // Handle Send button click
-  document.getElementById('send-btn').addEventListener('click', () => {
-    const userInput = document.getElementById('user-input').value.trim();
-    
-    if (userInput) {
-      // Display user message
-      displayMessage(userInput, 'user');
-      
-      // Get bot response
-      const botResponse = respond(userInput);
-      
-      // Display bot response
-      displayMessage(botResponse, 'bot');
-      
-      // Clear the input field
-      document.getElementById('user-input').value = '';
-    }
-  });
-  
-  // Optional: Handle "Enter" key to send message
-  document.getElementById('user-input').addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      document.getElementById('send-btn').click();
-    }
-  });
+});
+
+// Handle Enter key to send message
+document.getElementById('user-input').addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    document.getElementById('send-btn').click();
+  }
+});
