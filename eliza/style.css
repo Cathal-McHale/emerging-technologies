@@ -1,44 +1,43 @@
-/* General body styling */
 body {
     font-family: Arial, sans-serif;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #343541;
+    color: #d1d5db;
 }
 
 /* Header styling */
 h1 {
     text-align: center;
-    color: #444;
+    color: #ffffff;
 }
 
 /* Chat box styling */
 #chat {
     margin-bottom: 20px;
-    max-height: 600px;
+    max-height: 70vh;
     overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    padding: 10px;
+    background-color: #40414f;
+    border-radius: 10px;
+    box-shadow: none;
 }
 
 /* Message styling */
 .message {
     margin: 10px 0;
-    padding: 10px;
-    border-radius: 8px;
-    max-width: 75%;
+    padding: 15px;
+    border-radius: 12px;
+    max-width: 80%;
 }
 
 /* User message styling */
 .user-message {
     font-weight: bold;
     color: #fff;
-    background-color: #007BFF;
+    background-color: #1a73e8;
     align-self: flex-end;
 }
 
@@ -46,7 +45,7 @@ h1 {
 .bot-message {
     font-style: italic;
     color: #333;
-    background-color: #f1f1f1;
+    background-color: #3a3b45;
     align-self: flex-start;
 }
 
@@ -55,16 +54,18 @@ textarea {
     width: calc(100% - 120px);
     padding: 10px;
     margin-top: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #565869;
     border-radius: 4px;
     resize: none;
+    background-color: #40414f;
+    color: #d1d5db;
 }
 
 /* Button styling */
 button {
     padding: 10px;
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: #10a37f;
     color: white;
     border: none;
     border-radius: 4px;
@@ -73,7 +74,7 @@ button {
 
 /* Button hover effect */
 button:hover {
-    background-color: #0056b3;
+    background-color: #0e8c6e;
 }
 
 /* Button focus effect */
