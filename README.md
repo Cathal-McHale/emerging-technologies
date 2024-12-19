@@ -1,4 +1,4 @@
- # Emerging Technologies Project
+# Emerging Technologies Project
 This repository contains research tasks and implementations related to text processing, trigram modeling, and a basic Eliza chatbot. The project is implemented in Python and JavaScript and utilizes Jupyter Notebooks for demonstrating functionality and results.
 
 ## Table of Contents
@@ -100,18 +100,26 @@ Clone the repository:
 
 
 ### Eliza Chatbot
-###Link
+### Link
 https://cathal-mchale.github.io/emerging-technologies/
 - Files:
- index.html
-style.css
-app.js
+  - index.html
+  - style.css
+  - app.js
 - Objective: Implement a simple client-side chatbot based on the Eliza concept using HTML, CSS, and JavaScript.
 - How to Run:
-- Open index.html in any modern web browser.
-- Interact with the chatbot directly in the browser.
+  - Open index.html in any modern web browser.
+  - Interact with the chatbot directly in the browser.
 - Research:
-- The chatbot uses pattern matching and substitution to simulate a conversation. Refer to the comments in app.js for implementation details.
+  - The chatbot uses pattern matching and substitution to simulate a conversation. Refer to the comments in app.js for implementation details.
+  - References:
+    - https://en.wikipedia.org/wiki/ELIZA
+    - https://www.smallsurething.com/implementing-the-famous-eliza-chatbot-in-python/
+    - https://www.cse.buffalo.edu/~rapaport/572/S02/eliza.html
+    - https://github.com/dharness/eliza
+    - https://www.joelgrus.com/2016/05/23/fun-with-eliza-in-python/
+    - https://www.masswerk.at/elizabot/
+    - https://www.nltk.org/_modules/nltk/chat/eliza.html
 
 
 ## Dependencies
@@ -145,3 +153,9 @@ No external libraries used. The Eliza chatbot is implemented purely in vanilla J
 - https://docs.python.org/3/library/json.html
 
 - https://www.geeksforgeeks.org/reading-and-writing-json-to-a-file-in-python/
+
+-  https://towardsdatascience.com/implementing-a-character-level-trigram-language-model-from-scratch-in-python-27ca0e1c3c3f
+
+- https://docs.python.org/3/reference/import.html
+
+- https://towardsdatascience.com/text-generation-using-n-gram-model-8d12d9802aa0
